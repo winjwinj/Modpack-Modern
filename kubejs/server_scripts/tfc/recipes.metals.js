@@ -236,7 +236,7 @@ function registerTFCMetalsRecipes(event) {
 	event.recipes.tfc.heating('tfc:wrought_iron_grill', 1535)
 		.resultFluid(Fluid.of('gtceu:iron', 288))
 		.id(`tfc:heating/grill`)
-
+	
 	// Ванильная дверь декрафт
 	event.recipes.tfc.heating('minecraft:iron_door', 1535)
 		.resultFluid(Fluid.of('gtceu:iron', 288))
@@ -246,6 +246,11 @@ function registerTFCMetalsRecipes(event) {
 	event.recipes.tfc.anvil('minecraft:iron_door', '#forge:double_plates/wrought_iron', ['hit_last', 'draw_not_last', 'punch_not_last'])
 		.tier(3)
 		.id(`tfc:anvil/iron_door`)
+
+	// Wrought Iron Grill
+	event.recipes.tfc.anvil('tfc:wrought_iron_grill', '#forge:double_plates/wrought_iron', ['punch_last', 'draw_any', 'punch_not_last'])
+		.tier(3)
+		.id(`tfc:anvil/wrought_iron_grill`)
 
 	// Bloom -> Wrought Iron Ingot
 	event.recipes.tfc.anvil('gtceu:wrought_iron_ingot', 'tfc:refined_iron_bloom', ['hit_last', 'hit_second_last', 'hit_third_last'])
